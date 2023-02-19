@@ -1,8 +1,19 @@
 # Week 0 — Billing and Architecture
 ## AWS
 * ### Installed AWS CLI via Gitpod
-*  - Updated gitpod.yml to automate installation of AWS CLI
-
+       Added following lines in "main/.gitpod.yml"
+  ```YAML
+      tasks:
+        - name: aws-cli
+      env:
+        AWS_CLI_AUTO_PROMPT: on-partial
+      init: |
+      cd /workspace
+      curl "https://awscli.amazonaws.com/awscli-exe-linux-x86_64.zip" -o "awscliv2.zip"
+      unzip awscliv2.zip
+      sudo ./aws/install
+      cd $THEIA_WORKSPACE_ROOT
+  ````
   <img src="image/CLI.JPG" alt="cli" width="65%" height="65%" />
 
 * ### Created Admin user
