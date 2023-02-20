@@ -1,27 +1,13 @@
 # Week 0 — Billing and Architecture
 ## AWS
 * ### Installed AWS CLI via Gitpod
-       Added following lines in "main/.gitpod.yml"
-  ```YAML
-      tasks:
-        - name: aws-cli
-      env:
-        AWS_CLI_AUTO_PROMPT: on-partial
-      init: |
-      cd /workspace
-      curl "https://awscli.amazonaws.com/awscli-exe-linux-x86_64.zip" -o "awscliv2.zip"
-      unzip awscliv2.zip
-      sudo ./aws/install
-      cd $THEIA_WORKSPACE_ROOT
-  ````
+             
   <img src="image/CLI.JPG" alt="cli" width="65%" height="65%" />
 
 * ### Created Admin user
-  <img src="image/IAMADMIN.jpg" alt="admin" width="80%" height="80%" />
+  -     Using the account Root user is not recommended. Here, I have created an IAM user with administrative access.
 
-* ### Enabled MFA for AWS Root account and IAM User
-  <img src="image/MFA1.JPG" alt="mfa1" width="90%" height="90%" /> 
-  <img src="image/MFA2.jpg" alt="mfa2" width="90%" height="90%" />
+  <img src="image/IAMADMIN.jpg" alt="admin" width="80%" height="80%" />
 
 * ### Generated AWS Credentials
   <img src="image/Access_Keys.jpg" alt="accesskeys" width="75%" height="75%" />
@@ -48,9 +34,6 @@
 * ### [Logical Diagram](https://lucid.app/lucidchart/31d5ebe4-ac30-4113-8326-c5dafb48b6aa/edit?page=0_0&invitationId=inv_59bd6ae4-d3bc-4d14-91c1-eb9aa449ded7#)
   <img src="image/Logical.JPG" alt="shell" width="75%" height="75%" />
 
-* ### [CI/CD Pipeline](https://lucid.app/lucidchart/71b64e30-f6bd-472f-8fb8-a8616278d2b7/edit?page=0_0&invitationId=inv_10b01e13-1619-49bd-b730-6b30ae506368#) 
-  <img src="image/CI-CD.JPG" alt="shell" width="75%" height="75%" />
-
 * ### Bonus: Napkin 
   <img src="image/Napkin.jpg" alt="shell" width="75%" height="75%" />
 
@@ -58,5 +41,14 @@
 
 ## Homework Challenges
 
+* ### Enabled MFA for AWS Root account and IAM User
+  -     This will act as an additional layer of security. 
+
+  <img src="image/MFA1.JPG" alt="mfa1" width="90%" height="90%" /> 
+
+* ### [CI/CD Pipeline](https://lucid.app/lucidchart/71b64e30-f6bd-472f-8fb8-a8616278d2b7/edit?page=0_0&invitationId=inv_10b01e13-1619-49bd-b730-6b30ae506368#) 
+  <img src="image/CI-CD.JPG" alt="shell" width="75%" height="75%" />
+
 * ### Reviewed questions in the Well-Architected Tool
   <img src="image/Well-Architected.jpg" alt="shell" width="75%" height="75%" />
+
