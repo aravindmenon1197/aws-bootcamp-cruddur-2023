@@ -38,10 +38,7 @@
 * ### CloudShell
   <img src="image/Cloudshell.jpg" alt="shell" width="80%" height="80%" />
 
-* ### Reviewed questions in the Well-Architected Tool
-  <img src="image/Well-Architected.jpg" alt="shell" width="75%" height="75%" />
-  
-  
+
   
 ## Lucid Charts
 
@@ -56,3 +53,10 @@
 
 * ### Bonus: Napkin 
   <img src="image/Napkin.jpg" alt="shell" width="75%" height="75%" />
+
+
+
+## Homework Challenges
+
+* ### Reviewed questions in the Well-Architected Tool
+  <img src="image/Well-Architected.jpg" alt="shell" width="75%" height="75%" />
