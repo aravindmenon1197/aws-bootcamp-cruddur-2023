@@ -51,19 +51,19 @@
 
 * ### Use EventBridge to hookup Health Dashboard to SNS
 
-  - ### Followed documentation on [Monitoring AWS Health events with Amazon EventBridge](https://docs.amazonaws.cn/en_us/health/latest/ug/cloudwatch-events-health.html)
+  - #### Followed documentation on [Monitoring AWS Health events with Amazon EventBridge](https://docs.amazonaws.cn/en_us/health/latest/ug/cloudwatch-events-health.html)
 
 
   <img src="image/Eventbridge.jpg" alt="shell" width="75%" height="75%" />
 
 * ### Reviewed questions in the Well-Architected Tool
-  - ### Reviewed answers using the [AWS Well-Architected Framework](https://docs.aws.amazon.com/wellarchitected/latest/framework/operational-excellence.html)
+  - #### Reviewed answers using the [AWS Well-Architected Framework](https://docs.aws.amazon.com/wellarchitected/latest/framework/operational-excellence.html)
 
   <img src="image/Well-Architected.jpg" alt="shell" width="75%" height="75%" />
 
 * ### Open a support ticket and request a service limit
-  - ### Followed documentation on [AWS Service Quotas](https://aws.amazon.com/getting-started/hands-on/request-service-quota-increase/)
-  - ### Selected EC2 All Standard Spot Instance Requests
+  - #### Followed documentation on [AWS Service Quotas](https://aws.amazon.com/getting-started/hands-on/request-service-quota-increase/)
+  - #### Selected EC2 All Standard Spot Instance Requests
 
   <img src="image/Quota1.jpg" alt="shell" width="75%" height="75%" />  
 
