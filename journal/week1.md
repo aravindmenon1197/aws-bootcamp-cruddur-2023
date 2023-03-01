@@ -162,4 +162,28 @@ networks:
 
 <img src="image/frontend.JPG" alt="frontend" width="75%" height="75%" />
 
+
+
+## Implementing notification feature (Backend and Frontend)
+
+
+### Update open API document
+
+<img src="image/notifendpoint.JPG" alt="notifendpoint" width="75%" height="75%" />
+
+### Update Backend
+
+- We have to add route for notification feature in app.py
+
+<img src="image/notifactivities1.JPG" alt="notifactivities1" width="75%" height="75%" />
+
+- Then, create a new service for notifications
+
+<img src="image/notificationspy
+.JPG" alt="notificationspy
+" width="75%" height="75%" />
+
+
+## Adding DynamoDB Local and Postgres
+
 ## Homework Challenges 
