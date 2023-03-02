@@ -289,9 +289,12 @@ aws dynamodb put-item \
 
 <img src="image/dbexplorer.JPG" alt="dbexplorer" width="75%" height="75%" />
 
-### We can connect to postgres using terminal by running the command  ```psql –host localhost```
+### We can connect to postgres using terminal by running the command  ```psql -Upostgres –-host localhost```
 
-    <img src="image/postgrescli.JPG" alt="postgrescli" width="75%" height="75%" />
+  <img src="image/postgrescli.JPG" alt="postgrescli" width="75%" height="75%" />
+
+
+  
 
 
 ## Homework Challenges 
