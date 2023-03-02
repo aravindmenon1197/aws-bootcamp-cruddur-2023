@@ -212,4 +212,86 @@ networks:
 
 ## Adding DynamoDB Local and Postgres
 
+Let’s integrate Postgres and DynamoDB local into our existing [docker-compose](/workspace/aws-bootcamp-cruddur-2023/docker-compose.yml) file.
+
+### Add DynamoDB into docker-compose file.
+
+<img src="image/dynamo.JPG" alt="dynamo" width="75%" height="75%" />
+
+### Add Postgres into docker-compose file.
+
+<img src="image/postgres.JPG" alt="postgres" width="75%" height="75%" />
+
+### Map the volume to the Postgres database.
+
+<img src="image/mapvolume.JPG" alt="mapvolume" width="75%" height="75%" />
+
+### Testing DynamodbLocal 
+
+### Make sure **Port 8000** is unlocked
+
+#### Create a table
+
+```
+aws dynamodb create-table \
+    --endpoint-url http://localhost:8000 \
+    --table-name Music \
+    --attribute-definitions \
+        AttributeName=Artist,AttributeType=S \
+        AttributeName=SongTitle,AttributeType=S \
+    --key-schema AttributeName=Artist,KeyType=HASH AttributeName=SongTitle,KeyType=RANGE \
+    --provisioned-throughput ReadCapacityUnits=1,WriteCapacityUnits=1 \
+    --table-class STANDARD
+
+```
+
+<img src="image/dynamodb1.JPG" alt="dynamodb1" width="75%" height="75%" />
+
+##### Create an item 
+
+```
+aws dynamodb put-item \
+    --endpoint-url http://localhost:8000 \
+    --table-name Music \
+    --item \
+        '{"Artist": {"S": "No One You Know"}, "SongTitle": {"S": "Call Me Today"}, "AlbumTitle": {"S": "Somewhat Famous"}}' \
+    --return-consumed-capacity TOTAL  
+    
+```
+<img src="image/dynamodb2.JPG" alt="dynamodb2" width="75%" height="75%" />
+
+#### List table in dynamodb
+``` aws dynamodb list-tables --endpoint-url http://localhost:8000```
+
+<img src="image/dynamodb3.JPG" alt="dynamodb3" width="75%" height="75%" />
+
+### Installing Postgres client
+ - Add the following code in [gitpod.yml](/workspace/aws-bootcamp-cruddur-2023/.gitpod.yml) file.
+
+  ```
+   - name: postgres
+    init: |
+      curl -fsSL https://www.postgresql.org/media/keys/ACCC4CF8.asc|sudo gpg --dearmor -o /etc/apt/trusted.gpg.d/postgresql.gpg
+      echo "deb http://apt.postgresql.org/pub/repos/apt/ `lsb_release -cs`-pgdg main" |sudo tee  /etc/apt/sources.list.d/pgdg.list
+      sudo apt update
+      sudo apt install -y postgresql-client-13 libpq-dev
+  ```
+
+ <img src="image/postyml.JPG" alt="postyml" width="75%" height="75%" />
+
+ - Check if the Postgres extension is installed and add it to [gitpod.yml](/workspace/aws-bootcamp-cruddur-2023/.gitpod.yml) file.
+  
+ <img src="image/extension.JPG" alt="extension" width="75%" height="75%" />
+
+### Run docker compose and make sure necessary ports are unlocked.
+
+### Creating a new connection in database explorer.
+
+<img src="image/dbexplorer.JPG" alt="dbexplorer" width="75%" height="75%" />
+
+### We can connect to postgres using terminal by running the command  ```psql –host localhost```
+
+    <img src="image/postgrescli.JPG" alt="postgrescli" width="75%" height="75%" />
+
+
 ## Homework Challenges 
