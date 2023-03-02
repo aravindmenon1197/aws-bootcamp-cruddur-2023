@@ -146,6 +146,8 @@ networks:
 ### Start the app either by running ```docker compose -f "docker-compose.yml" up -d --build```  
 **OR**
 
+/workspace/aws-bootcamp-cruddur-2023/docker-compose.yml
+
 <img src="image/composeup.JPG" alt="composeup" width="75%" height="75%" />
 
 
@@ -164,25 +166,59 @@ networks:
 
 
 
-## Implementing notification feature (Backend and Frontend)
+## Sign up for Cruddur
+- Create a new user
+![notif404](./image/login1.JPG)
+- Confirm your email and enter confirmation code as **1234**
+![notif404](./image/login3.JPG)
+
+- We have not set up notifications features for our app hence it returns **404 Not Found**
+![notif404](./image/notif404.JPG)
 
 
-### Update open API document
+
+## Implementing notification feature
+
+
+- Update the [openAPI](/workspace/aws-bootcamp-cruddur-2023/backend-flask/openapi-3.0.yml) file to add an endpoint for notifications.
 
 <img src="image/notifendpoint.JPG" alt="notifendpoint" width="75%" height="75%" />
 
-### Update Backend
+### Updating the backend for the app to create an endpoint.
 
-- We have to add route for notification feature in app.py
+- Defining a route for notifications inside [app.py](/workspace/aws-bootcamp-cruddur-2023/backend-flask/app.py)
 
 <img src="image/notifactivities1.JPG" alt="notifactivities1" width="75%" height="75%" />
 
-- Then, create a new service for notifications
+- Creating a new service for notifications inside [notifications_activities.py](/workspace/aws-bootcamp-cruddur-2023/backend-flask/services/notifications_activities.py)
 
-<img src="image/notificationspy
-.JPG" alt="notificationspy
-" width="75%" height="75%" />
+<img src="image/notificationspy.JPG" alt="notificationspy" width="75%" height="75%" />
 
+- Import the service inside [app.py](/workspace/aws-bootcamp-cruddur-2023/backend-flask/app.py)
+
+<img src="image/import.JPG" alt="import" width="75%" height="75%" />
+
+- Verify the endpoint ```/api/activities/notifications``` to see if it returns the json data.
+
+<img src="image/endp.JPG" alt="endp" width="75%" height="75%" />
+
+### Updating the frontend for the app to create an endpoint.
+
+- Create a [NotificationsFeedPage](/workspace/aws-bootcamp-cruddur-2023/frontend-react-js/src/pages/NotificationsFeedPage.js)
+
+<img src="image/feedpage.JPG" alt="feedpage" width="75%" height="75%" />
+
+- Import the page inside [App.js](/workspace/aws-bootcamp-cruddur-2023/frontend-react-js/src/App.js)
+
+<img src="image/import1.JPG" alt="import1" width="75%" height="75%" />
+
+- Add a new path for the notifications page in react
+
+<img src="image/path.JPG" alt="path" width="75%" height="75%" />
+
+- View the feed by clicking notifications. 
+
+<img src="image/notifactivities2.JPG" alt="notifactivities2" width="75%" height="75%" />
 
 ## Adding DynamoDB Local and Postgres
 
