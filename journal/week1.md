@@ -143,14 +143,7 @@ networks:
     name: cruddur
 
 ```
-### Start the app either by running ```docker compose -f "docker-compose.yml" up -d --build```  
-**OR**
-
-/workspace/aws-bootcamp-cruddur-2023/docker-compose.yml
-
-<img src="image/composeup.JPG" alt="composeup" width="75%" height="75%" />
-
-
+### Start the app byrunning ```docker compose -f "docker-compose.yml" up -d --build```  
 
 <img src="image/dockercompose1.JPG" alt="dockercompose1" width="75%" height="75%" />
 
@@ -165,19 +158,16 @@ networks:
 <img src="image/frontend.JPG" alt="frontend" width="75%" height="75%" />
 
 
-
 ## Sign up for Cruddur
 - Create a new user
 ![notif404](./image/login1.JPG)
 - Confirm your email and enter confirmation code as **1234**
 ![notif404](./image/login3.JPG)
 
-- We have not set up notifications features for our app hence it returns **404 Not Found**
-![notif404](./image/notif404.JPG)
-
-
-
 ## Implementing notification feature
+
+### We have not set up notifications features for our app hence it returns **404 Not Found**
+![notif404](./image/notif404.JPG)
 
 
 - Update the [openAPI](/workspace/aws-bootcamp-cruddur-2023/backend-flask/openapi-3.0.yml) file to add an endpoint for notifications.
