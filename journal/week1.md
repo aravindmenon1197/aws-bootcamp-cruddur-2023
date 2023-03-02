@@ -293,8 +293,40 @@ aws dynamodb put-item \
 
   <img src="image/postgrescli.JPG" alt="postgrescli" width="75%" height="75%" />
 
-
-  
-
-
+ 
 ## Homework Challenges 
+
+## Run the dockerfile CMD as an external script
+
+### We will try to execute the following command inside the [Dockerfile](/workspace/aws-bootcamp-cruddur-2023/backend-flask/Dockerfile) externally.
+
+<img src="image/extcmd.JPG" alt="extcmd" width="75%" height="75%" />
+
+### Create a bash file inside backend-flask directory which contains the above Dockerfile.
+
+<img src="image/extbash.JPG" alt="extbash" width="75%" height="75%" />
+
+### Add the following instructions inside Dockerfile.
+- chmod +x will make the script executable.
+
+<img src="image/extdocker.JPG" alt="extdocker" width="75%" height="75%" />
+
+## Push and tag a image to DockerHub
+
+### Login to dockerhub from cli
+
+<img src="image/dockerlogin.JPG" alt="dockerlogin" width="75%" height="75%" />
+
+### Tag an image referenced by image id
+
+<img src="image/dockertag.JPG" alt="dockertag" width="75%" height="75%" />
+
+### Push the image to DockerHub
+
+<img src="image/dockerpush.JPG" alt="dockerpush" width="75%" height="75%" />
+
+### View the image in Dockerhub
+
+<img src="image/dockerhub.JPG" alt="dockerhub" width="75%" height="75%" />
+
+### Removing docker login credentials using ```docker logout```
